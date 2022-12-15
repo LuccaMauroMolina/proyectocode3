@@ -1,0 +1,70 @@
+/*.box{
+    width: 200px;
+    height: 300px;
+    background-color: $color-p;
+    border-radius: 16px;
+}
+
+.box.tarjet{
+    @extend .box;
+    font-size: 5px;
+    color: blue;
+}
+
+
+@mixin flex-center{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.contenedor-tarjet{
+       @include flex-center();
+}
+
+@mixin flexbox($width, $height){
+
+display: flex;
+width: $width;
+height: $height;
+}
+
+.contenedor-style{
+    @include flexbox(60px, 40px );
+}
+
+
+@import "colores";
+@import "tipografias";
+@import "./base/base";
+
+@import "./components/botones";
+@import "./components/navbar";
+@import "./components/tarjetas";
+
+
+@import "./pages/ayuda";
+@import "./pages/crearcuenta";
+@import "./pages/index";
+@import "./pages/iniciarsesion";
+@import "./pages/nosotros";
+@import "./pages/preguntas";
+@import "./pages/productos";
+
+
+@import "./utils/bucles";
+@import "./utils/maps";
+@import "./utils/mixin";
+@import "./utils/variables";
+
+$color_p: black;
+$color_s: crimson;
+$padding_l_r_t_b: 15px;
+$border: 1px solid black;
+
+.box{
+    background-color: $color-p;
+    color: $color_s;
+    padding-left: $padding_l_r_t_b;
+    border: $border;
+}

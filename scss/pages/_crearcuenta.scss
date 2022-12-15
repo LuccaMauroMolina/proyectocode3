@@ -1,0 +1,100 @@
+form{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 400px;
+    height: 300px;
+    padding: auto;
+    margin: auto;
+    background-color: darkgray;
+    background-image: url(../images/brownieoreo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.gmail label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-crear{
+     padding: 15px 0px;
+     text-align: left;
+}
+     .cuenta{
+        width: 350px;
+        height: 30px;
+        border-radius: 5px;
+        
+    }
+
+.gmail{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0px;
+}
+
+.sexualidad{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.genero{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.radio{
+    position: relative;
+    right: 2rem;
+    
+}
+
+
+.notificacion{
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px ;
+}
+
+.recibir{
+       position: relative;
+       left: 48px;
+       bottom: 15px;    
+}
+
+.aceptar{
+      position: relative;
+      bottom: 15px;
+}
+
+.novedades{
+         padding-top: 15px;
+}
+
+.btn{
+    text-align: center;
+    border: none;
+    width: 100%;
+    color: white;
+    background: black;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+
+    &:hover{
+        background: crimson;
+    }
+}

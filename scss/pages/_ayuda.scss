@@ -1,0 +1,29 @@
+.ayuda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+    .respuesta{
+        border-top: 1px solid black;
+        width: 100%;
+        padding-bottom: 20px;
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 600;
+        font-size: large;
+        
+ }       
+ 
+ .respuesta3{
+        border-top: 1px solid black;
+        width: 100% ;
+        padding-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: medium;
+ 
+ 
+}

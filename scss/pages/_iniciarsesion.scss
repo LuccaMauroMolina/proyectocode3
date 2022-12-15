@@ -1,0 +1,48 @@
+form{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 400px;
+    height: 300px;
+    padding: auto;
+    margin: auto;
+    background-color: darkgray;
+    background-image: url(../images/brownieoreo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.iniciar{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 15px;
+    justify-content: center;
+
+.usuario{
+      padding: 15px 0px;
+}
+
+input[type="gmail"],
+input[type="password"]{
+   width: 350px;
+   height: 30px;
+   border-radius: 5px;
+}
+
+}
+.btn2{
+
+    border: none;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    background: black;
+    color: white;
+    cursor: pointer;
+
+
+&:hover{
+     background-color: crimson;
+}
+}

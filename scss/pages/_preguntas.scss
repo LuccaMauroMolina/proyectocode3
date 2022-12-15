@@ -1,0 +1,42 @@
+.preg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #3e3932;
+
+    .preg3{
+        text-align: center;
+
+    }
+
+    .preguntas{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+    }
+
+    .respuesta{
+        border-top: 1px solid black;
+        width: 100%;
+        padding-bottom: 20px;
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 600;
+        font-size: large;
+    }
+    .respuesta2{
+        border-top: 1px solid black;
+        width: 100% ;
+        padding-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: medium;
+ 
+ 
+ }
+}
