@@ -1,0 +1,99 @@
+.main2{
+    display: flex;
+    flex-direction: column;
+}
+
+.brownie{
+       display: grid;
+       grid-template-columns: repeat(4, 1fr);
+       grid-template-rows: repeat(2, 1fr);
+       gap: 20px;
+       justify-items: center;
+       padding-bottom: 25px;
+}
+
+.border{
+     border: 1px solid black;
+     box-shadow: 1px 1px 5px;
+}
+
+
+.brow{
+   padding-bottom: 15px;
+}
+
+.span{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.efectivo,.transferir,.subti{
+         padding-bottom: 15px;
+}
+
+.subti{
+   font-size: 16px;
+   font-weight: 500;
+}
+
+label{
+ display: flex;
+ justify-content: center;
+}
+
+.comprar{
+     background-color: white;
+     padding: 10px;
+     border-radius: 15%;
+}
+
+.comprar:hover{
+    background-color: crimson;
+    cursor: pointer;
+    transition: all;
+    
+}
+
+.cucu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(233, 233, 47, 0.637);
+}
+
+.cupos{
+    border: $border;
+    display: flex;
+    margin: 25px;
+    cursor: pointer;
+    width: 500px;
+    box-shadow: 3px 3px 10px 0px black;
+    
+
+    
+}
+    .cupon{
+         text-align: center;
+         font-family: 'Xanh Mono', monoespaciado;
+         padding-bottom: 15px;
+    }
+
+    .cup{
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .cupo{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 15px;
+    }
+
+    .cupones{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+    }

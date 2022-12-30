@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    overflow-x:hidden
 }
 
 //Variables
@@ -23,7 +24,37 @@ header{
        padding-bottom: 15px;
      }
 
-    
+     .nav__menu.menu{
+         display: flex;
+         justify-content: center;
+     }
+
+     .nav__label, .nav__input{
+        display: none;
+    }
+    .nav__item{
+        color: white;
+        text-decoration: none;
+        --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  }
+  
+  .nav__item::after{
+      content: "";
+      display: block;
+      background-color: black;
+      width: 90%;
+      margin-top: 3px;
+      height: 3px;
+      clip-path: var(--clippy);
+      transition: clip-path .2s;
+  }
+  .nav__item:hover{
+      --clippy: polygon(0 0, 100% 0, 100% 100%,0 100%)
+  }
+
+  .nav__input:checked + .nav__menu{
+    clip-path: circle(100% at center);
+}
 
 
 ul{
@@ -34,8 +65,8 @@ ul{
 
 a{
     text-decoration: none;
-    color: black;
     letter-spacing: 1px;
+    padding-right: 15px;
    }
 
    a:hover{
@@ -76,10 +107,10 @@ div .listas{
 div .perfil{
     display: block;
 
-    ul li{
+    /*ul li{
         padding-bottom: $padding_l_r_t_b;
         padding-right: 15px;
-    }
+    }*/
 
 }
 
@@ -108,7 +139,7 @@ main{
 section.catalogo{
     border: $border;
     background-color: grey;
-    height: 200vh;
+    height: 80vh;
 
     h2{
         text-align: center;
@@ -118,10 +149,17 @@ section.catalogo{
         letter-spacing: 1px;
     }
 
-    ul li{
+    ul .section{
       padding-left: $padding_l_r_t_b;
       padding-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     
+    }
+
+    li{
+        color: white;
     }
 }
 
@@ -147,19 +185,25 @@ footer{
      display: flex;
      justify-content: space-evenly;
 
-     ul li{
+     .redes{
          color: white;
          list-style-type: none;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
 
      }
 
-     a{
+     svg{
+        cursor: pointer;
+        color: white;
+     }
+
+    a{
       text-decoration: none;
      }
 
-     a:hover{
-           color: red;
-     }
 
      h3{
        color: white;
@@ -169,6 +213,7 @@ footer{
 
      li{
        padding-bottom: 15px;
+       color: white;
      }
 }
 
@@ -178,7 +223,7 @@ footer{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: #3e3932;
+    background-color: white;
 
     .preg3{
         text-align: center;
@@ -219,9 +264,17 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+
 
     .respuesta{
-        @extend .respuesta
+        border-top: 1px solid black;
+        width: 100%;
+        padding-bottom: 20px;
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 600;
+        font-size: large;
         
  }       
  
@@ -247,6 +300,8 @@ form{
     padding: auto;
     margin: auto;
     background-color: darkgray;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 .iniciar{
     display: flex;
@@ -427,15 +482,29 @@ label{
 
 .quienes-somos{
        padding: 50px 80px;
-       display: grid;
-       grid-template-areas: 
-       "h1nosotros imgNosotros"
-       "p1nosotros imgNosotros";
+       
        gap: 2rem;
 }
 
+.image{
+    height: 500px;
+    position: relative;
+}
+
 .imgnosotros{
-        width: 40vw;
+       width: 750px;
+       margin: 0;
+       position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+
+.contacto1{
+        
 }
 
 
@@ -464,12 +533,133 @@ label{
        }
 }
 
+.cucu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(233, 233, 47, 0.637);
+}
+
+.cupos{
+    border: $border;
+    display: flex;
+    margin: 25px;
+    cursor: pointer;
+    width: 500px;
+    box-shadow: 3px 3px 10px 0px black;
+    
+
+    
+}
+    .cupon{
+         text-align: center;
+         font-family: 'Xanh Mono', monoespaciado;
+         padding-bottom: 15px;
+    }
+
+    .cup{
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .cupo{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 15px;
+    }
+
+    .cupones{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+    }
+
+   .contacto2{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 15px;
+    justify-content: center;
+    align-items: center;
+   }
+
+.contacto1{
+     height: 500px;
+     margin-top: 50px ;
+     margin-bottom: 50px ;
+}
+
+.cmc{
+    padding: auto;
+    margin: auto;
+}
+
+
+.btnc{
+    @extend .btn2;
+    border: none;
+    width: 100%;
+    color: white;
+    background: burlywood;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: $padding_l_r_t_b;
+    cursor: pointer;
+}
+
+input[type="gmail"],
+input[type="password"],
+input[type="name"],
+input[type="text"]{
+    width: 350px;
+   height: 30px;
+   border-radius: 5px;
+}
+
+
+
+.contact{
+       padding-bottom: 15px;
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+    header{
+         width: 100%;
+    }
+
+
+    footer{
+        width: 100%;
+    }
+
+    .cupos{
+        width: 110px;
+    }
+
+    .image{
+        width: 100%;
+    }
+    .p1{
+        font-size: 0.8rem;
+        width: 100%;
+    }
+    .quienes-somos{
+           padding: 25px;
+    }
+}
+
 @media (min-width: 480px) and (max-width: 600px){
         .brownie{
              display: grid;
              grid-template-columns: repeat(3, 1fr);
              grid-template-rows: repeat(3, 1fr)
         }
+        .imgnosotros{
+            width: 100%;
+       }
+
+       
 }
 
 @media (min-width: 600px) and (max-width: 800px){
@@ -478,4 +668,73 @@ label{
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr)
    } 
+
+   .cupos{
+        width: 300px;
+   }
+
+   .imgnosotros{
+        width: 100%;
+   }
+   .main__catalogo{
+         display: flex;
+         flex-direction: column;
+         flex-wrap: wrap;
+   }
+
+   .catalogo{
+        height: 15vh;
+   }
+
+   ul, .section{
+        display: flex;
+        justify-content: space-evenly;
+
+   }
+
+   .catalogo2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transform: translateX(-40px);
+
+   }
+   .main__catalogo{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+   }
+   .brow{
+       width: 140px;
+       display: flex;
+       flex-wrap: wrap;
+   }
+   .brows{
+       width: 140px;
+   }
+}
+
+
+
+@media (max-width: 700px){
+    .nav__label{
+         display: block;
+         cursor: pointer;
+    }
+    .nav__menu{
+       position: fixed;
+       top: 80px;
+       bottom: 0;
+       background: rgba(153, 145, 145, 0.315)  ;
+       width: 100%;
+       left: 0;
+       display: flex;
+       justify-content: space-evenly;
+       flex-direction: column;
+       align-items: center;
+       clip-path: circle(0 at center);
+       transition: clip-path 1s ease-in-out;
+
+    }
 }
